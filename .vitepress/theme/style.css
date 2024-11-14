@@ -44,43 +44,33 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  /* --vp-c-bg: #09090B; */
-  --vp-c-bg: #FFFFFF;
-  --vp-c-default-1: var(--vp-c-gray-1);
-  --vp-c-default-2: var(--vp-c-gray-2);
-  --vp-c-default-3: var(--vp-c-gray-3);
-  --vp-c-default-soft: var(--vp-c-gray-soft);
+  /* base background color */
+  --vp-c-bg: #fafafa;
+  
+  /* Zinc theme color system */
+  --vp-c-brand-1: #3f3f46;
+  --vp-c-brand-2: #3f3f46;
+  --vp-c-brand-3: #18181B;
+  --vp-c-brand-soft: rgba(113, 113, 122, 0.14);
 
-  --vp-c-brand-1: var(--vp-c-indigo-1);
-  --vp-c-brand-2: var(--vp-c-indigo-2);
-  --vp-c-brand-3: var(--vp-c-indigo-3);
-  --vp-c-brand-soft: var(--vp-c-indigo-soft);
+  /* default text color */
+  --vp-c-text-1: #18181b;
+  --vp-c-text-2: #27272a;
+  --vp-c-text-3: #3f3f46;
 
-  --vp-c-tip-1: var(--vp-c-brand-1);
-  --vp-c-tip-2: var(--vp-c-brand-2);
-  --vp-c-tip-3: var(--vp-c-brand-3);
-  --vp-c-tip-soft: var(--vp-c-brand-soft);
+  /* warning message color */
+  --vp-c-warning-1: #f59e0b;
+  --vp-c-warning-2: #d97706;
+  --vp-c-warning-3: #b45309;
+  --vp-c-warning-soft: rgba(245, 158, 11, 0.14);
 
-  --vp-c-warning-1: var(--vp-c-yellow-1);
-  --vp-c-warning-2: var(--vp-c-yellow-2);
-  --vp-c-warning-3: var(--vp-c-yellow-3);
-  --vp-c-warning-soft: var(--vp-c-yellow-soft);
+  /* danger message color */
+  --vp-c-danger-1: #dc2626;
+  --vp-c-danger-2: #b91c1c;
+  --vp-c-danger-3: #991b1b;
+  --vp-c-danger-soft: rgba(220, 38, 38, 0.14);
 
-  --vp-c-danger-1: var(--vp-c-red-1);
-  --vp-c-danger-2: var(--vp-c-red-2);
-  --vp-c-danger-3: var(--vp-c-red-3);
-  --vp-c-danger-soft: var(--vp-c-red-soft);
-}
-.dark {
-  --vp-c-bg: #09090B;
-}
-
-
-/**
- * Component: Button
- * -------------------------------------------------------------------------- */
-
-:root {
+  /* button style */
   --vp-button-brand-border: transparent;
   --vp-button-brand-text: var(--vp-c-white);
   --vp-button-brand-bg: var(--vp-c-brand-3);
@@ -90,38 +80,63 @@
   --vp-button-brand-active-border: transparent;
   --vp-button-brand-active-text: var(--vp-c-white);
   --vp-button-brand-active-bg: var(--vp-c-brand-1);
-}
 
-/**
- * Component: Home
- * -------------------------------------------------------------------------- */
 
-:root {
+  --vp-code-block-bg: #09090B;
+
+  /* homepage hero style */
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
-    #bd34fe 30%,
-    #41d1ff
+    #3b3b3b 30%,
+    #5c5c5c
   );
-
+  
   --vp-home-hero-image-background-image: linear-gradient(
     -45deg,
-    #bd34fe 50%,
-    #47caff 50%
+    #3b3b3b 50%,
+    #5c5c5c 50%
   );
   --vp-home-hero-image-filter: blur(44px);
 }
 
-@media (min-width: 640px) {
-  :root {
-    --vp-home-hero-image-filter: blur(56px);
-  }
+/* dark theme */
+.dark {
+  --vp-c-bg: #09090B;
+  --vp-c-text-1: #fafafa;
+  --vp-c-text-2: #e4e4e7;
+  --vp-c-text-3: #FAFAFA;
+  
+  /* brand color in dark theme */
+  --vp-c-brand-1: #e4e4e7;
+  --vp-c-brand-2: #d4d4d8;
+  --vp-c-brand-3: #FAFAFA;
+  --vp-c-brand-soft: rgba(228, 228, 231, 0.14);
+
+  /* code block style */
+  --vp-code-block-bg: #18181B;
+
+  /* homepage hero style */
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    #71717a 30%,
+    #a1a1aa
+  );
+  
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #71717a 50%,
+    #a1a1aa 50%
+  );
 }
 
-@media (min-width: 960px) {
-  :root {
-    --vp-home-hero-image-filter: blur(68px);
-  }
+/* custom link color */
+:root {
+  --vp-c-brand: #71717a;
+  --vp-c-brand-light: #a1a1aa;
+  --vp-c-brand-lighter: #d4d4d8;
+  --vp-c-brand-dark: #52525b;
+  --vp-c-brand-darker: #3f3f46;
 }
 
 /**
@@ -143,3 +158,24 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+/* sidebar style */
+.VPSidebar {
+  border-right: 1px solid var(--vp-c-brand-soft);
+  background-color: var(--vp-c-bg) !important;
+}
+
+.curtain {
+  background-color: var(--vp-c-bg) !important;
+}
+
+/* code block border */
+.vp-adaptive-theme {
+  border: 1px solid #28282D;
+}
+
+.dark .VPButton.brand {
+  color: var(--vp-c-bg);
+}
+.dark .VPButton.brand:hover {
+  color: var(--vp-c-bg);
+}

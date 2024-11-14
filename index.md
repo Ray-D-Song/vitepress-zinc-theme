@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "Ray's Note"
-  text: "Randomly noted technical content, chaotic and disordered"
-  tagline: My great project tagline
+  name: "VitePress Zinc Theme"
+  text: ""
+  tagline: "A simple and clean VitePress Zinc theme, inspired by Shadcn"
   actions:
     - theme: brand
       text: Markdown Examples
